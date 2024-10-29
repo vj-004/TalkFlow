@@ -28,7 +28,6 @@ const Profile = () => {
       setSelectedColor(userInfo.color);
     }
     if(userInfo.image) {
-      console.log(userInfo.image);
       
       setImage(`${HOST}/${userInfo.image}`);
     }

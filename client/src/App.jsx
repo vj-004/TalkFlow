@@ -22,7 +22,6 @@ const PrivateRoute = ({children}) => {
 const AuthRoute = ({children}) => {
   const {userInfo} = useAppStore();
   const isAuthenticated = !!userInfo;
-  console.log(isAuthenticated);
   
   return isAuthenticated ? <Navigate to="/chat" /> : children
 };
@@ -44,7 +43,6 @@ export const App = () => {
           setUserInfo(undefined);
 
         }
-        console.log({response});
       }catch(error){
         setUserInfo(undefined);
       }finally{

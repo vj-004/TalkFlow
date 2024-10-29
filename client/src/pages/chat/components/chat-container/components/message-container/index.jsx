@@ -19,7 +19,6 @@ const MessageContainer = () => {
 
     const getMessages = async () => {
       try{
-        console.log(GET_ALL_MESSAGES_ROUTE);
         
         const res = await apiClient.post(
           GET_ALL_MESSAGES_ROUTE,{id:selectedChatData._id},
@@ -52,7 +51,6 @@ const MessageContainer = () => {
   }, [selectedChatMessages]);
 
   const downloadFile = async (url) => {
-    console.log("Download URL:", url);
     
     try {
       setIsDownloading(true);
@@ -64,7 +62,6 @@ const MessageContainer = () => {
             }
         });
 
-        console.log("Response Data:", res.data);
         setIsDownloading(false);
         setFileDownloadProgress(0);
         const urlBlob = window.URL.createObjectURL(new Blob([res.data]));

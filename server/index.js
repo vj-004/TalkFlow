@@ -19,7 +19,7 @@ const _dirname = path.resolve();
 
 
 app.use(cors({
-    origin: [process.env.ORIGIN],
+    origin: ["https://talkflow-b9xw.onrender.com"],
     methods: ["GET","POST","PUT","PATCH","DELETE"],
     credentials: true,
 }));

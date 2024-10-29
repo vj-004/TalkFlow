@@ -5,7 +5,7 @@ import Message from "./models/MessagesModel.js";
 const setupSocket = (server) => {
     const io = new SocketIOServer(server,{
         cors: {
-            origin: process.env.ORIGIN,
+            origin: "https://talkflow-b9xw.onrender.com",
             methods: ["GET","POST"],
             credentials: true,
         },
